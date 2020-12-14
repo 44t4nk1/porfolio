@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Portfolio extends StatefulWidget {
   @override
@@ -41,6 +42,51 @@ class _PortfolioState extends State<Portfolio> {
                 ),
               ],
             ),
+          ),
+          SizedBox(
+            height: size.height * 1 / 10,
+          ),
+          Container(
+            width: double.infinity,
+            padding: EdgeInsets.only(left: size.width * 5 / 100),
+            child: Text(
+              "This is ",
+              style: GoogleFonts.montserrat(
+                color: Color(0xffe0e0e0),
+                fontSize: size.width * 4 / 100,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: size.height * 1 / 100,
+          ),
+          Row(
+            children: [
+              Container(
+                // width: double.infinity,
+                padding: EdgeInsets.only(left: size.width * 5 / 100),
+                child: Text(
+                  "Siddharth Singh",
+                  style: GoogleFonts.montserrat(
+                    color: Color(0xffe0e0e0),
+                    fontSize: size.width * 5 / 100,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ),
+              Container(
+                // width: double.infinity,
+                child: Text(
+                  ".",
+                  style: GoogleFonts.montserrat(
+                    color: Color(0xff4878ff),
+                    fontSize: size.width * 5 / 100,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ),
+            ],
           ),
         ],
       ),
