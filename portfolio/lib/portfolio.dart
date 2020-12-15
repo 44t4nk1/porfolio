@@ -44,49 +44,39 @@ class _PortfolioState extends State<Portfolio> {
             ),
           ),
           SizedBox(
-            height: size.height * 1 / 10,
+            height: size.height * 5 / 100,
           ),
           Container(
+            margin: EdgeInsets.only(left: size.width * 2 / 100, right: size.width * 1 / 10),
             width: double.infinity,
-            padding: EdgeInsets.only(left: size.width * 5 / 100),
-            child: Text(
-              "This is ",
-              style: GoogleFonts.montserrat(
-                color: Color(0xffe0e0e0),
-                fontSize: size.width * 4 / 100,
-                fontWeight: FontWeight.w500,
+            child: RichText(
+              text: TextSpan(
+                text: 'This is ',
+                style: GoogleFonts.montserrat(
+                  color: Color(0xffe0e0e0),
+                  fontSize: 40,
+                  fontWeight: FontWeight.w500,
+                ),
+                children: <TextSpan>[
+                  TextSpan(
+                    text: '\nSiddharth Singh',
+                    style: GoogleFonts.montserrat(
+                      color: Color(0xffe0e0e0),
+                      fontSize: 60,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                  TextSpan(
+                    text: '.',
+                    style: GoogleFonts.montserrat(
+                      color: Color(0xff4878ff),
+                      fontSize: 60,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                ],
               ),
             ),
-          ),
-          SizedBox(
-            height: size.height * 1 / 100,
-          ),
-          Row(
-            children: [
-              Container(
-                // width: double.infinity,
-                padding: EdgeInsets.only(left: size.width * 5 / 100),
-                child: Text(
-                  "Siddharth Singh",
-                  style: GoogleFonts.montserrat(
-                    color: Color(0xffe0e0e0),
-                    fontSize: size.width * 5 / 100,
-                    fontWeight: FontWeight.w800,
-                  ),
-                ),
-              ),
-              Container(
-                // width: double.infinity,
-                child: Text(
-                  ".",
-                  style: GoogleFonts.montserrat(
-                    color: Color(0xff4878ff),
-                    fontSize: size.width * 5 / 100,
-                    fontWeight: FontWeight.w800,
-                  ),
-                ),
-              ),
-            ],
           ),
         ],
       ),
