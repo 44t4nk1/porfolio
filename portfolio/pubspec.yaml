@@ -51,6 +51,7 @@ flutter:
     - assets/images/triangle.png
     - assets/images/square.png
     - assets/images/circle.png
+    - assets/images/me.png
     - google_fonts/Montserrat-Medium.ttf
     - google_fonts/Montserrat-Bold.ttf
     - google_fonts/Montserrat-Black.ttf

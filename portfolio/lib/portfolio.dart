@@ -21,7 +21,7 @@ class _PortfolioState extends State<Portfolio> {
               children: [
                 Container(
                   padding: EdgeInsets.all(size.width * 1 / 100),
-                  height: size.height * 10 / 100,
+                  height: size.height * 8 / 100,
                   child: Image.asset("assets/images/triangle.png"),
                 ),
                 SizedBox(
@@ -29,7 +29,7 @@ class _PortfolioState extends State<Portfolio> {
                 ),
                 Container(
                   padding: EdgeInsets.all(size.width * 1 / 100),
-                  height: size.height * 10 / 100,
+                  height: size.height * 8 / 100,
                   child: Image.asset("assets/images/circle.png"),
                 ),
                 SizedBox(
@@ -37,7 +37,7 @@ class _PortfolioState extends State<Portfolio> {
                 ),
                 Container(
                   padding: EdgeInsets.all(size.width * 1 / 100),
-                  height: size.height * 10 / 100,
+                  height: size.height * 8 / 100,
                   child: Image.asset("assets/images/square.png"),
                 ),
               ],
@@ -46,37 +46,48 @@ class _PortfolioState extends State<Portfolio> {
           SizedBox(
             height: size.height * 5 / 100,
           ),
-          Container(
-            margin: EdgeInsets.only(left: size.width * 2 / 100, right: size.width * 1 / 10),
-            width: double.infinity,
-            child: RichText(
-              text: TextSpan(
-                text: 'This is ',
-                style: GoogleFonts.montserrat(
-                  color: Color(0xffe0e0e0),
-                  fontSize: 40,
-                  fontWeight: FontWeight.w500,
-                ),
-                children: <TextSpan>[
-                  TextSpan(
-                    text: '\nSiddharth Singh',
+          Stack(
+            children: [
+              Container(
+                padding: EdgeInsets.all(size.width * 1 / 100),
+                height: size.height * 80 / 100,
+                width: double.infinity,
+                alignment: Alignment.centerRight,
+                child: Image.asset("assets/images/me.png"),
+              ),
+              Container(
+                margin: EdgeInsets.only(left: size.width * 2 / 100, right: size.width * 1 / 10),
+                width: double.infinity,
+                child: RichText(
+                  text: TextSpan(
+                    text: 'This is ',
                     style: GoogleFonts.montserrat(
                       color: Color(0xffe0e0e0),
-                      fontSize: 60,
-                      fontWeight: FontWeight.w800,
+                      fontSize: 40,
+                      fontWeight: FontWeight.w500,
                     ),
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: '\nSiddharth Singh',
+                        style: GoogleFonts.montserrat(
+                          color: Color(0xffe0e0e0),
+                          fontSize: 60,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                      TextSpan(
+                        text: '.',
+                        style: GoogleFonts.montserrat(
+                          color: Color(0xff4878ff),
+                          fontSize: 60,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                    ],
                   ),
-                  TextSpan(
-                    text: '.',
-                    style: GoogleFonts.montserrat(
-                      color: Color(0xff4878ff),
-                      fontSize: 60,
-                      fontWeight: FontWeight.w800,
-                    ),
-                  ),
-                ],
+                ),
               ),
-            ),
+            ],
           ),
         ],
       ),
