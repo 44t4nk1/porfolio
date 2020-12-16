@@ -12,7 +12,7 @@ class _PortfolioState extends State<Portfolio> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.red,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -44,9 +44,6 @@ class _PortfolioState extends State<Portfolio> {
                   ),
                 ],
               ),
-            ),
-            SizedBox(
-              height: size.height * 5 / 100,
             ),
             Stack(
               children: [
@@ -97,6 +94,7 @@ class _PortfolioState extends State<Portfolio> {
                     Container(
                       width: double.infinity,
                       margin: EdgeInsets.only(left: size.width * 2 / 100, right: size.width * 1 / 10),
+                      padding: EdgeInsets.only(bottom: size.height * 5 / 100),
                       child: TypewriterAnimatedTextKit(
                         text: [
                           "I am a Programmer.",
@@ -116,6 +114,11 @@ class _PortfolioState extends State<Portfolio> {
                 ),
               ],
             ),
+            Container(
+              height: size.height * 1 / 100,
+              color: Color(0xff4878ff),
+              margin: EdgeInsets.symmetric(horizontal: size.width * 2 / 100),
+            )
           ],
         ),
       ),
